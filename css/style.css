@@ -1,39 +1,52 @@
 @charset "UTF-8";
 /**
  * $File: style.css $
- * $Date: 2017-09-17 13:20:34 $
+ * $Date: 2023-09-29 13:55:44 $
  * $Revision: $
- * $Creator: Jen-Chieh Shen $
+ * $Creator: Sushank-Sharma $
  * $Notice: See LICENSE.txt for modification and distribution information
- *                   Copyright (c) 2017 by Shen, Jen-Chieh $
+ *                   Copyright (c) 2023 by Ss21, Sushank-Sharma $
  */
 
-
 * {
-  margin: 0px;
-  padding: 0px;
+  box-sizing: border-box;
+  /* color: #393c41; */
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: 'Ubuntu Mono', monospace;
+  width: 100%;
+  font-family: "Ubuntu Mono", monospace;
   background-color: #232323;
-  color: #D2D2D2;
+  color: #d2d2d2;
+  text-align: center;
 }
 
 #announcement {
   position: fixed;
-
   top: 0px;
   right: 0px;
   left: 0px;
-
   z-index: 100;
-  color: #00FFFF;
-  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  opacity: 1;
+  display: flex;
+  background-color: rgba(23, 26, 32, 0.8);
   padding-top: 3px;
   padding-bottom: 4px;
+  /* font-family: "pixelFJ8pt1__"; */
+}
 
-  /* font-family: 'pixelFJ8pt1__'; */
+#announcement-text {
+  transition: opacity 1s ease; /* Add a smooth opacity transition */
+  opacity: 1; /* Initial opacity */
+}
+
+#announcement-text.hide {
+  opacity: 0; /* When hiding, set opacity to 0 */
 }
 
 .tips {
@@ -41,7 +54,7 @@ body {
   font-size: 0.8em;
   padding-top: 8px;
 
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 
 #container {
@@ -55,7 +68,7 @@ header {
   position: absolute;
   padding: 1rem;
   text-align: center;
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 
   padding-top: 3rem;
   opacity: 0.9;
@@ -70,6 +83,15 @@ h1 {
   margin: 0px;
 }
 
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 20px;
+  margin-top: 20px; /* Adjust the value as needed to control the spacing */
+  color: #00ffff;
+}
+
 #content {
   margin: 0px auto;
 
@@ -77,20 +99,20 @@ h1 {
 }
 
 #self-photo {
-  background: url('../images/v5.jpg');
+  margin: 0 auto;
+  background: white;
+}
+
+#self-photo {
+  background: url("../images/v5.gif");
   background-repeat: no-repeat;
-  margin: 0px auto;
-
-  border: 3px solid #B0C4DE;
-
-  /* NOTE: 'background-size' and 'width'/'height' must match to each other.
-   */
-  background-size: 150px 150px;
+  background-position: center center;
+  margin: 0 auto;
+  border: 3px solid #b0c4de;
+  background-size: contain;
   width: 150px;
   height: 150px;
   border-radius: 10%;
-
-  --balloon-font-size: 15px;
 }
 
 #panel {
@@ -99,14 +121,10 @@ h1 {
   font-size: 1.3em;
 }
 
-h2 {
-  color: #17A0FB;
-}
-
 hr {
   display: block;
   border: 0;
-  border-top: 2px solid #6B8E23;
+  border-top: 2px solid #6b8e23;
   margin: 0.1em 0;
   padding: 0;
 }
@@ -114,7 +132,7 @@ hr {
 /* Information Section. */
 a {
   text-decoration: none;
-  color: #00FFFF;
+  color: #00ffff;
 }
 
 ul {
@@ -131,15 +149,9 @@ ul li {
 .shinny-slot {
   display: none;
   position: absolute;
-  box-shadow: 0px 0px 10px white,
-              0px 0px 20px white,
-              0px 0px 30px white,
-              0px 0px 30px white,
-              0px 0px 30px white,
-              0px 0px 30px white,
-              0px 0px 40px white,
-              0px 0px 40px white,
-              0px 0px 50px white;
+  box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 30px white,
+    0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white,
+    0px 0px 40px white, 0px 0px 40px white, 0px 0px 50px white;
   background-color: white;
   /* border: 1px solid red; */
   width: 20px;
@@ -156,135 +168,131 @@ ul li {
   margin: 10px;
 }
 
-#facebook-link {
-  background: url('../images/icons/facebook.svg');
-  background-size: 50px 50px;
-}
-
-#twitter-link {
-  background: url('../images/icons/twitter.svg');
-  background-size: 50px 50px;
-  background-color: white;
-  border-radius: 50%;
+a.skills {
+  color: red;
 }
 
 #github-link {
-  background: url('../images/icons/github.svg');
+  background: url("../images/icons/github.svg");
   background-size: 50px 50px;
   background-color: white;
-  border-radius: 50%;
-}
-
-#gitlab-link {
-  background: url('../images/icons/gitlab.svg');
-  background-size: 50px 50px;
-  background-color: gray;
   border-radius: 50%;
 }
 
 #linkedin-link {
-  background: url('../images/icons/linkedin.svg');
+  background: url("../images/icons/linkedin.svg");
   background-size: 50px 50px;
   background-color: white;
   border-radius: 50%;
 }
 
 #gmail-link {
-  background: url('../images/icons/gmail.svg');
+  background: url("../images/icons/gmail.svg");
   background-size: 50px 50px;
 }
 
-#rss-link {
-  background: url('../images/icons/blog.svg');
+#whatsapp-link {
+  background: url("../images/icons/whatsapp.svg");
+  /* background: url("https://www.svgrepo.com/show/452133/whatsapp.svg"); */
   background-size: 50px 50px;
 }
 
-/* Games section. */
-.panel {
-  padding: 5px 30px;
+/* Skills section. */
+.professional-skills {
+  border: 1px solid lightgray;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.app-logo {
-  display: inline-block;
-  vertical-align: middle;
+.heading {
+  font-family: Roboto;
+  font-size: 28px;
+  text-align: center;
+}
+
+.skill {
   margin: 10px;
 }
 
-#logo-archers-duel {
-  background: url('../images/games/archers_duel.png');
-  background-size: 100px 71px;
-  width: 100px;
-  height: 71px;
+.progress-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 
-#logo-cardinal {
-  background: url('../images/games/cardinal.png');
-  background-size: 60px 60px;
-  width: 60px;
-  height: 60px;
+.progress {
+  height: 20px;
+  background-color: #008000;
+  border-radius: 10px;
 }
 
-#logo-twilight-tower {
-  background: url('../images/games/Twilight_Tower.png');
-  background-size: 80px 80px;
-  width: 80px;
-  height: 80px;
+.percentage,
+.experience {
+  font-family: Roboto;
+  font-size: 14px;
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: left;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#logo-hemlock {
-  background: url('../images/games/hemlock.png');
-  background-size: 64px 64px;
-  width: 64px;
-  height: 64px;
+.label {
+  flex-basis: auto;
 }
 
-#logo-might-and-blade {
-  background: url('../images/games/might_&_blade.png');
-  background-size: 180px 72px;
-  width: 180px;
-  height: 72px;
+.professional-skills {
+  border-radius: 20px;
+  align-items: stretch;
 }
 
-#logo-sugar-sleuths {
-  background: url('../images/games/SugarSleuths.png');
-  background-size: 134px 75px;
-  width: 134px;
-  height: 75px;
+.experience {
+  margin-top: 5px;
+}
+/* Custom Scroll Up */
+
+#scroll-up-button {
+  position: fixed;
+  bottom: 8px;
+  right: 20px;
+  background-color: rgba(23, 26, 32, 0.65);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  display: none;
+  z-index: 9999;
 }
 
-#logo-pey {
-  background: url('../images/games/PEY.png');
-  background-size: 64px 64px;
-  width: 64px;
-  height: 64px;
+#scroll-up-button i {
+  color: #fff; /* Icon color */
+  font-size: 20px; /* Icon size */
 }
 
-#logo-ais {
-  background: url('../images/games/AIS.png');
-  background-size: 64px 64px;
-  width: 64px;
-  height: 64px;
+#scroll-up-button {
+  /* ... (previous styles) ... */
+  transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
 }
 
-#logo-meteo {
-  background: url('../images/app/Meteo.png');
-  background-size: 64px 64px;
-  width: 64px;
-  height: 64px;
-}
-
-#logo-lnd {
-  background: url('../images/app/LnD.png');
-  background-size: 64px 64px;
-  width: 64px;
-  height: 64px;
-}
-
-#logo-moncon {
-  background: url('../images/app/MonCon.png');
-  background-size: 64px 64px;
-  width: 64px;
-  height: 64px;
+#scroll-up-button:hover {
+  background-color: rgba(
+    23,
+    26,
+    32,
+    0.85
+  ); /* Change background color on hover */
 }
 
 footer {
@@ -298,7 +306,7 @@ footer {
 
   padding: 1rem;
   text-align: center;
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 
   color: black;
 }

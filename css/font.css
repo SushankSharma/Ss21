@@ -1,16 +1,15 @@
 @charset "UTF-8";
 /**
  * $File: font.css $
- * $Date: 2017-09-18 06:19:49 $
+ * $Date: 2023-09-29 14:00:00 $
  * $Revision: $
- * $Creator: Jen-Chieh Shen $
+ * $Creator: Sushank-Sharma $
  * $Notice: See LICENSE.txt for modification and distribution information
- *                   Copyright (c) 2017 by Shen, Jen-Chieh $
+ *                   Copyright (c) 2023 by Ss21, Sushank-Sharma $
  */
 
-
 @font-face {
-  font-family: 'pixelFJ8pt1__';
+  font-family: "pixelFJ8pt1__";
   src: url("../font/pixelFJ8pt1__.ttf");
   font-weight: normal;
   font-style: normal;
