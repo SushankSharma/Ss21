@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/**
+ * $File: blog.css $
+ * $Date: 2017-09-18 13:17:36 $
+ * $Revision: $
+ * $Creator: Jen-Chieh Shen $
+ * $Notice: See LICENSE.txt for modification and distribution information
+ *                   Copyright (c) 2017 by Shen, Jen-Chieh $
+ */
+
+
+#blog-image {
+  background: url('../images/blog_pic.png');
+  background-repeat: no-repeat;
+  margin: 0px auto;
+
+  /* border: 3px solid #0000cd; */
+
+  /* NOTE(jenchieh): 'background-size' and 'width'/'height'
+  *                   must match to each other.
+  */
+  background-size: 300px 168px;
+  width: 300px;
+  height: 168px;
+}
+
+#blog-panel {
+  text-align: left;
+  padding-left: 20px;
+
+  font-family: Times;
+}
+
+#blog-panel ul li {
+  display: block;
+  text-indent: 0px;
+  /* vertical-align: middle; */
+}
+
+/* Only one url at one section. */
+.single-url {
+  padding: 5px 15px;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* When multiple urls at one section. */
+.multiple-url {
+  padding: 3px 15px;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.panel-text-left {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.panel-text-right {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.panel-text-center {
+  text-align: center;
+}
+
+p {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.blog-list {
+  padding-left: 60px;
+  padding-top: 15px;
+}
+
+.padding-left-20 { padding-left: 20px; }
+.padding-left-15 { padding-left: 15px; }
+.padding-left-10 { padding-left: 10px; }
+.padding-left-5 { padding-left: 5px; }

@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/**
+ * $File: style.css $
+ * $Date: 2017-09-17 13:20:34 $
+ * $Revision: $
+ * $Creator: Jen-Chieh Shen $
+ * $Notice: See LICENSE.txt for modification and distribution information
+ *                   Copyright (c) 2017 by Shen, Jen-Chieh $
+ */
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Ubuntu Mono', monospace;
+  background-color: #232323;
+  color: #D2D2D2;
+}
+
+#announcement {
+  position: fixed;
+
+  top: 0px;
+  right: 0px;
+  left: 0px;
+
+  z-index: 100;
+  color: #00FFFF;
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 3px;
+  padding-bottom: 4px;
+
+  /* font-family: 'pixelFJ8pt1__'; */
+}
+
+.tips {
+  text-align: center;
+  font-size: 0.8em;
+  padding-top: 8px;
+
+  font-family: 'Catamaran', sans-serif;
+}
+
+#container {
+  margin: 0px auto;
+  width: 60%;
+
+  /* border: 1px solid red; */
+}
+
+header {
+  position: absolute;
+  padding: 1rem;
+  text-align: center;
+  background-color: #CCCCCC;
+
+  padding-top: 3rem;
+  opacity: 0.9;
+
+  right: 0px;
+  left: 0px;
+
+  color: black;
+}
+
+h1 {
+  margin: 0px;
+}
+
+#content {
+  margin: 0px auto;
+
+  /* border: 1px solid yellow; */
+}
+
+#self-photo {
+  background: url('../images/v5.jpg');
+  background-repeat: no-repeat;
+  margin: 0px auto;
+
+  border: 3px solid #B0C4DE;
+
+  /* NOTE: 'background-size' and 'width'/'height' must match to each other.
+   */
+  background-size: 150px 150px;
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+
+  --balloon-font-size: 15px;
+}
+
+#panel {
+  width: 100%;
+  margin: 0px auto;
+  font-size: 1.3em;
+}
+
+h2 {
+  color: #17A0FB;
+}
+
+hr {
+  display: block;
+  border: 0;
+  border-top: 2px solid #6B8E23;
+  margin: 0.1em 0;
+  padding: 0;
+}
+
+/* Information Section. */
+a {
+  text-decoration: none;
+  color: #00FFFF;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+ul li {
+  display: inline-block;
+  text-indent: -9999px;
+  vertical-align: middle;
+}
+
+.shinny-slot {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 0px 10px white,
+              0px 0px 20px white,
+              0px 0px 30px white,
+              0px 0px 30px white,
+              0px 0px 30px white,
+              0px 0px 30px white,
+              0px 0px 40px white,
+              0px 0px 40px white,
+              0px 0px 50px white;
+  background-color: white;
+  /* border: 1px solid red; */
+  width: 20px;
+  height: 20px;
+  margin-left: 25px;
+  margin-top: 25px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.link-image {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+#facebook-link {
+  background: url('../images/icons/facebook.svg');
+  background-size: 50px 50px;
+}
+
+#twitter-link {
+  background: url('../images/icons/twitter.svg');
+  background-size: 50px 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#github-link {
+  background: url('../images/icons/github.svg');
+  background-size: 50px 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#gitlab-link {
+  background: url('../images/icons/gitlab.svg');
+  background-size: 50px 50px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+#linkedin-link {
+  background: url('../images/icons/linkedin.svg');
+  background-size: 50px 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#gmail-link {
+  background: url('../images/icons/gmail.svg');
+  background-size: 50px 50px;
+}
+
+#rss-link {
+  background: url('../images/icons/blog.svg');
+  background-size: 50px 50px;
+}
+
+/* Games section. */
+.panel {
+  padding: 5px 30px;
+}
+
+.app-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px;
+}
+
+#logo-archers-duel {
+  background: url('../images/games/archers_duel.png');
+  background-size: 100px 71px;
+  width: 100px;
+  height: 71px;
+}
+
+#logo-cardinal {
+  background: url('../images/games/cardinal.png');
+  background-size: 60px 60px;
+  width: 60px;
+  height: 60px;
+}
+
+#logo-twilight-tower {
+  background: url('../images/games/Twilight_Tower.png');
+  background-size: 80px 80px;
+  width: 80px;
+  height: 80px;
+}
+
+#logo-hemlock {
+  background: url('../images/games/hemlock.png');
+  background-size: 64px 64px;
+  width: 64px;
+  height: 64px;
+}
+
+#logo-might-and-blade {
+  background: url('../images/games/might_&_blade.png');
+  background-size: 180px 72px;
+  width: 180px;
+  height: 72px;
+}
+
+#logo-sugar-sleuths {
+  background: url('../images/games/SugarSleuths.png');
+  background-size: 134px 75px;
+  width: 134px;
+  height: 75px;
+}
+
+#logo-pey {
+  background: url('../images/games/PEY.png');
+  background-size: 64px 64px;
+  width: 64px;
+  height: 64px;
+}
+
+#logo-ais {
+  background: url('../images/games/AIS.png');
+  background-size: 64px 64px;
+  width: 64px;
+  height: 64px;
+}
+
+#logo-meteo {
+  background: url('../images/app/Meteo.png');
+  background-size: 64px 64px;
+  width: 64px;
+  height: 64px;
+}
+
+#logo-lnd {
+  background: url('../images/app/LnD.png');
+  background-size: 64px 64px;
+  width: 64px;
+  height: 64px;
+}
+
+#logo-moncon {
+  background: url('../images/app/MonCon.png');
+  background-size: 64px 64px;
+  width: 64px;
+  height: 64px;
+}
+
+footer {
+  /* Make it stick at the bottom. */
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  opacity: 0.5;
+
+  padding: 1rem;
+  text-align: center;
+  background-color: #CCCCCC;
+
+  color: black;
+}

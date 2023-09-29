@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/**
+ * $File: blinker.css $
+ * $Date: 2019-04-22 23:11:30 $
+ * $Revision: $
+ * $Creator: Jen-Chieh Shen $
+ * $Notice: See LICENSE.txt for modification and distribution information
+ *                   Copyright © 2019 by Shen, Jen-Chieh $
+ */
+
+
+.blinker {
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-duration: 1s;
+  /* Basic styling */
+  display: inline-block;
+  background: #40FF40;
+  color: #40FF40;
+}
+
+@keyframes blinker {
+  from { opacity: 1.0; } to { opacity: 0.0; }
+}
