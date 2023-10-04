@@ -7,7 +7,7 @@ type Props = {};
 
 const Header = ({}: Props) => {
   return (
-    <header className="sticky top-0 flex items-start xl:items-center justify-between p-5 z-20 max-w-7xl mx-auto">
+    <header className="sticky top-0 flex flex-col md:flex-row items-center justify-between p-5 z-20 max-w-7xl mx-auto">
       <motion.div
         initial={{
           x: -500,
@@ -20,18 +20,19 @@ const Header = ({}: Props) => {
           scale: 1,
         }}
         transition={{ duration: 1.5 }}
-        className="flex flex-row items-center"
+        className="flex flex-row items-center space-x-4 md:space-x-6"
       >
         <SocialIcon
           url="https://github.com/SushankSharma"
           fgColor="gray"
           bgColor="transparent"
+          target="_blank"
         />
-
         <SocialIcon
           url="https://in.linkedin.com/in/sushank-sharma-ss21"
           fgColor="gray"
           bgColor="transparent"
+          target="_blank"
         />
       </motion.div>
 
@@ -46,8 +47,8 @@ const Header = ({}: Props) => {
           opacity: 1,
           scale: 1,
         }}
-        transition={{ duration: 1.5 }}
-        className="flex flex-row items-center text-gray-300 cursor-pointer"
+        transition={{ duration: 1 }}
+        className="flex flex-row items-center mt-0 md:mt-0 text-gray-300 cursor-pointer"
       >
         <SocialIcon
           className="cursor-pointer"
@@ -55,10 +56,26 @@ const Header = ({}: Props) => {
           fgColor="gray"
           bgColor="transparent"
         />
-        <p className="uppercase inline-flex text-sm text-gray-400 order-2">
+        <p className="uppercase text-sm text-gray-400 md:text-base ">
           Get In Touch
         </p>
       </motion.div>
+
+      {/* Media query for screens less than 768px */}
+      <style jsx>
+        {`
+          @media screen and (max-width: 767px) {
+            header {
+              flex-direction: row;
+              align-items: flex-start; /* Align items to the top */
+              justify-content: space-between;
+            }
+            .flex-col {
+              margin-top: 0; /* Set margin-top to 0 for top alignment */
+            }
+          }
+        `}
+      </style>
     </header>
   );
 };

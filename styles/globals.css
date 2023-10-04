@@ -5,12 +5,21 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Apply this style for screens less than 768px */
+  html,
+  body {
+    overflow-x: hidden;
   }
 }
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-[#24242424]  rounded-full uppercase text-xs tracking-widest transition-all text-gray-500 hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
+    @apply px-6 py-2 border border-[#242424]  rounded-full uppercase text-xs tracking-widest transition-all text-gray-500 hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
   }
 
   .contactInput {
