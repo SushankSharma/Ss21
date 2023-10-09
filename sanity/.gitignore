@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+.next/
+
 
 # Compiled Sanity Studio
 /dist

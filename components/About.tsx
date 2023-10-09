@@ -1,17 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "@/typings";
+import { urlFor } from "@/sanity";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <div className="relative">
       {/* Place the <h3> element at the top-center */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
-        <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl md:text-4xl lg:text-5xl px-4 md:px-10 py-2">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 justify-between py-2">
+        <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl md:text-4xl lg:text-5xl px-4 md:px-10 py-2 font-bold mb-4 border-b-2 border-[#F7AB0A]">
           About
         </h3>
       </div>
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12 z-0" />
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -27,29 +32,23 @@ function About({}: Props) {
           transition={{ duration: 1.2 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          src="https://cdnb.artstation.com/p/assets/images/images/053/690/053/large/gregers-berth-oogway-gregersberth-summerchallenge02.jpg?1662796156"
-          className="-mb-20 md:mb-0 flex-shrink-0 w-56 md:w-64 md:h-96 xl:w-[350px] xl:h-[24vmax] object-cover max-w-full h-auto"
+          src={urlFor(pageInfo?.profilePic).url()}
+          className="-mb-20 md:mb-0 flex-shrink-0 w-56 sm:w-32 sm:h-48 md:w-64 md:h-80 xl:w-[350px] xl:h-[24vmax] object-cover max-w-full h-auto rounded-lg object-center z-10" // Add rounded-lg class here
           loading="lazy"
           alt="About Me"
         ></motion.img>
 
-        <div className="md:ml-8 space-y-6 md:space-y-10 xl:space-y-12 overflow-y-scroll md:overflow-y-visible">
-          <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold">
+        <div className="md:ml-8 space-y-6 md:space-y-8 xl:space-y-12 overflow-y-scroll md:overflow-y-visible">
+          <h4 className="text-xl md:text-xl lg:text-3xl font-semibold">
+            <br />
             Here is a{" "}
-            <span className="decoration-[#F7AB0A]/50 underline">little</span>{" "}
+            <span className="decoration-[#F7AB0A]/50 underline">
+              little
+            </span>{" "}
             background
           </h4>
           <p className="text-base md:text-lg lg:text-xl text-left">
-            Familiarity of delivering as a{" "}
-            <span className="decoration-[#F7AB0A]/75 underline">
-              Jr. Web Developer
-            </span>{" "}
-            (Intern) with [11] months of hands-on B2B experience. I was humbled
-            to be part of the team appointed to build the Front-End fleet
-            navigational dashboard application for the "XOS | Electric Trucks —
-            L.A., USA". Committed to steady learning and delivering efficient
-            solutions and helping teams to stand out in this digital era.
-            Together we shall set the new status quo.
+            {pageInfo?.backgroundInformation}
           </p>
         </div>
       </motion.div>
