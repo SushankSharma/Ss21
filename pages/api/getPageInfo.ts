@@ -18,7 +18,7 @@ type ErrorResponse = {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data | ErrorResponse>
+  res: NextApiResponse<Data | ErrorResponse>,
 ) {
   try {
     const pageInfo: PageInfo = await sanityClient.fetch(pageInfoQuery);

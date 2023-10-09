@@ -21,7 +21,7 @@ type ErrorResponse = {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data | ErrorResponse>
+  res: NextApiResponse<Data | ErrorResponse>,
 ) {
   try {
     const experiences: Experience[] = await sanityClient.fetch(query);

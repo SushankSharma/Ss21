@@ -27,14 +27,16 @@ function Skills({ skills }: Props) {
 
       <div className="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-4 gap-3">
         {/* Get first half of skills and map */}
-        {skills?.slice(0, skills.length / 2).map((skill) => (
-          <Skill key={skill._id} skill={skill} />
-        ))}
+        {skills
+          ?.slice(0, skills.length / 2)
+          .map((skill) => <Skill key={skill._id} skill={skill} />)}
 
         {/* Get second half of skills and map with direction left */}
-        {skills?.slice(skills.length / 2, skills.length).map((skill) => (
-          <Skill key={skill._id} skill={skill} directionLeft />
-        ))}
+        {skills
+          ?.slice(skills.length / 2, skills.length)
+          .map((skill) => (
+            <Skill key={skill._id} skill={skill} directionLeft />
+          ))}
       </div>
     </motion.div>
   );
