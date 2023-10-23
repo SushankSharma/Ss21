@@ -5,11 +5,9 @@ import { urlFor } from "../sanity";
 
 type Props = {
   pageInfo: PageInfo;
-
-  pageInfo: PageInfo;
 };
 
-function About({ pageInfo  pageInfo }: Props) {
+function About({ pageInfo }: Props) {
   return (
     <div className="relative">
       {/* Place the <h3> element at the top-center */}
