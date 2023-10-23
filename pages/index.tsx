@@ -49,7 +49,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <title>{pageInfo?.name} | ©️ Ss21</title>
         <link
           rel="icon"
-          href="https://cdn.sanity.io/images/6gmjgnpw/production/483c0d2a722ccfc32757a3d51c8765c3764f6702-1555x2000.png?w=2000&fit=max&auto=format"
+          href="z"
         />
       </Head>
       {isLoading ? (
