@@ -8,12 +8,37 @@
   }
 }
 
+@media (max-width: 767px) {
+  /* Apply this style for screens less than 768px */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-[#24242424]  rounded-full uppercase text-xs tracking-widest transition-all text-gray-500 hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
+    @apply px-6 py-2 border border-[#242424]  rounded-full uppercase text-sm tracking-widest transition-all text-gray-400 hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
   }
 
   .contactInput {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all hover:border-[#F7AB0A]/40 focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40;
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-400 transition-all hover:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40;
+
+    /* Media query for screens less than 768px */
+    @media (max-width: 767px) {
+      padding: 10px; /* Adjust padding for smaller screens */
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    /* Media query for screens 768px and above */
+    @media (min-width: 768px) {
+      padding: 12px; /* Adjust padding for larger screens */
+      font-size: 16px; /* Adjust font size for larger screens */
+    }
   }
 }

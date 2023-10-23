@@ -1,77 +1,60 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import { Experience } from "../typings";
-// import { urlFor } from "../sanity";
+import { Experience } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  experience: Experience;
+};
 
-function ExperienceCard({}: Props) {
+function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-5 flex-shrink-0 w-full md:w-[80%] xl:w-[90%] snap-center bg-[#292929] p-5 md:p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{
-          y: -100,
+          y: -50,
           opacity: 0,
         }}
-        className="w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        // src={urlFor(experience.companyImage).url()}
-        src="https://upload.wikimedia.org/wikipedia/en/e/eb/All_India_Council_for_Technical_Education_logo.png"
-        alt=""
+        src={urlFor(experience.companyImage).url()}
+        className="w-32 h-32 md:w-44 md:h-44 xl:w-[200px] xl:h-[200px] rounded-full object-cover object-center z-10"
       />
 
-      <div className="px-0 md:px-10">
-        {/* <h4 className="text-4xl font-light">{experience.jobTitle}</h4> */}
-        <h4 className="text-4xl font-light text-center">
-          Database Associate | Intern
+      <div className="px-0 md:px-10 ">
+        <h4 className="text-2xl md:text-3xl font-light">
+          {experience.jobTitle}
         </h4>
-
-        {/* <p className="font-bold text-2xl mt-1">{experience.company}</p> */}
-        <p className="font-bold text-2xl mt-1 text-center">
-          Ministry of Cooperation (AICTE), Bharat
+        <p className="font-bold text-xl md:text-2xl mt-1">
+          {experience.company}
         </p>
-
-        <div className="flex space-x-2 my-2 justify-center">
-          {/* {experience.technologies.map((technology) => ( */}
-          {/* {experience.technologies.map((technology) => ( */}
-          <img
-            //   key={technology._id}
-            className="h-10 w-10 rounded-full"
-            //   src={urlFor(technology.image).url()}
-            src="https://cdn-icons-png.flaticon.com/512/919/919836.png"
-            alt=""
-          />
-          <img
-            //   key={technology._id}
-            className="h-10 w-10 rounded-full bg-slate-400"
-            //   src={urlFor(technology.image).url()}
-            src="https://iconape.com/wp-content/png_logo_vector/amazon-database.png"
-            alt=""
-          />
-          {/* ))} */}
+        <div className="flex space-x-2 my-2">
+          {experience.technologies.map((technology) => (
+            <img
+              key={technology._id}
+              className="h-10 w-10 rounded-full"
+              src={urlFor(technology.image).url()}
+              loading="lazy"
+              alt="Technology"
+            />
+          ))}
         </div>
 
-        <p className="uppercase py-5 text-gray-300">
-          {/* {new Date(experience.dateStarted).toDateString()} -{" "}
+        <p className="uppercase py-3 text-gray-300">
+          {new Date(experience.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"
-            : new Date(experience.dateEnded).toDateString()} */}
-          <span className="decoration-[#F7AB0A] underline">
-            DEC-2022 - JAN-2023
-          </span>
+            : new Date(experience.dateEnded).toDateString()}
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-s font-light text-justify">
-          {/* {experience.points.map((point, i) => (
+        <ul
+          className="list-disc space-y-4 ml-5 text-sm font-light text-left max-h-96 pr-5 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80 lg:max-h-[200px]"
+          style={{ maxHeight: "200px", overflowY: "scroll" }}
+        >
+          {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
-          ))} */}
-          <li>
-            {" "}
-            Played a key role in establishing the Cooperative Society Database,
-            streamlining evaluations and reducing approval times by 95%.
-          </li>
+          ))}
         </ul>
       </div>
     </article>
